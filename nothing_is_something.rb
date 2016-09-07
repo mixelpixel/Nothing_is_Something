@@ -80,9 +80,74 @@ puts
 puts "TrueClass.instance_methods(true): " + TrueClass.instance_methods(true).to_s
 puts TrueClass.instance_methods(true).sort
 puts
-puts "Of note: look into pretty print & require 'pp'"
-puts "Also of note: false is the singleton instance of " + false.class.to_s + " and"
+puts "(Off topis: look into pretty print & require 'pp')"
+puts "Of note: false is the singleton instance of " + false.class.to_s + " and"
 puts "nil is the singleton instance of " + nil.class.to_s + "."
 puts
+puts "Booleans in Ruby have a 'Special' syntax which Smalltalk does not."
+puts "e.g. Smalltalk ONLY has six keywords: \n\ttrue, false, nil, self, super, thisContext."
+puts "Ruby Keywords include:"
+puts "\talias, and, BEGIN, begin, break, case, class, def, defined?, do"
+puts "\telse, elsif, END, end, ensure, false, for, if, in, module, next, nil"
+puts "\tnot, or, redo, rescue, retry, return, self, super, then, true"
+puts "\tundef, unless, until, when, while, yield"
+puts
+puts "Pay special attention to >>> if <<<"
+puts
+puts "A special syntax for dealing with that Boolean object..."
+puts
+puts """\
+if ( 1 == 1 )             # ALSO: \"if 1.send(:==, 1)\"
+  'is true'
+else
+  'is false'
+end                       ==> 'is true'
+
+NOTE - this is the same as:
+
+if ( true )
+  'is true'
+else
+  'is false'
+end                       ==> 'is true'
+"""
+puts
+# NOTE the first conditional syntax returns the string in irb without puts, but not with the compiler. Why?
+# Odd behaviour:
+puts "Why do only two of the three conditionals print?"
+
+# This doesn't put anything to screen:
+if true
+  'is true_1'
+else
+  'is false'
+end
+
+puts "Seriously, why?"
+
+# But this does:
+if true
+  puts 'is true_2'
+else
+  puts 'is false'
+end
+
+# And this works without "puts":
+def truthiness
+  if 1.send(:==, 1)
+    'is true_3'
+  else
+    'is false'
+  end
+end
+
+puts truthiness
+puts "Weird."
+puts
+puts "BUT - TO THE POINT: in Ruby these conditionals are more like \"if ( 'truthy' )\", then..."
+puts
+
+
+
 
 
