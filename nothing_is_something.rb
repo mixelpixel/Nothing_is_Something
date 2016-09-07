@@ -1,21 +1,23 @@
-#234567891----*----2----*----3----*----4----*----5----*----6----*-----72--*----8----*----9----*--100-------11012345--120
-# written by pdk with vim
-
 =begin
+1234567891----*----2----*----3----*----4----*----5----*----6----*-----72--*----8----*----9----*--100-------11012345--120
+written by pdk (with vim!)
 
-The following are notes, thoughts and code bits from Sandi Metz's talk, "Nothing is Something"
-https://www.youtube.com/watch?v=zc9OvLzS9mU
+The following are notes, thoughts and code bits from Sandi Metz's talk,
+"Nothing is Something"
+from: https://www.youtube.com/watch?v=zc9OvLzS9mU
+
 4 parts
 1) SMALLTALK INFECTED
 2) CONDITION AVERSE
 3) MESSAGE CENTRIC
 4) ABSTRACTION SEEKING
 
+*----------------------------------------------------------------------*
+
 1) SMALLTALK INFECTED
 https://en.wikipedia.org/wiki/Smalltalk
 http://stackoverflow.com/questions/1821266/what-is-so-special-about-smalltalk
 "Sending messages to objects"
-
 =end
 
 # NOTE these are synonymous:
@@ -26,6 +28,7 @@ puts "Does " + 1.to_s + " == " + 1.send(:to_s) + "?  " + (1.to_s == 1.send(:to_s
 puts "Ayep... 1 == 1 is " + (1 == 1).to_s
 puts "What is the true.class? " + true.class.to_s
 puts
+
 
 # NOTE these are also synonymous:
 puts "1 + 1 = " + (1 + 1).to_s                # <-- "1 + 1 = 2"
@@ -49,5 +52,6 @@ puts
 puts "Fixnum.instance_methods(true) are: \n" + Fixnum.instance_methods(true).to_s
 puts Fixnum.instance_methods(true).sort
 puts
+
 
 
