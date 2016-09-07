@@ -26,7 +26,7 @@ puts 1.send(:to_s)  # <-- "1"
 
 puts "Does " + 1.to_s + " == " + 1.send(:to_s) + "?  " + (1.to_s == 1.send(:to_s)).to_s
 puts "Ayep... 1 == 1 is " + (1 == 1).to_s
-puts "What is the true.class? " + true.class.to_s
+puts "Q: What is the true.class? (Hint: it's classy!!) A: " + true.class.to_s
 puts
 
 
