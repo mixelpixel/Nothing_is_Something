@@ -277,21 +277,24 @@ end              |  end               |  end                |  end
 
 """
 puts
-puts """Now anything is true!
+puts """Now anything is truthy!
+
 
 'anything'.if_true {puts 'evaluated block'}
-'evaluated block'
+==> 'evaluated block'
 
 'anything'.if_true {puts 'evaluated block'}
-# block is ignored
+==> block is ignored
 
 nil.if_true        {puts 'evaluated block'}
-# block is ignored
+==> block is ignored
 
 nil.if_false       {puts 'evaluated block'}
-'evaluated block'
+==> 'evaluated block'
+
 
 NOW (and here's why 'self' was included):
+
 
 INSTEAD OF:
 
@@ -307,7 +310,9 @@ else              ==>     if_false {puts 'is false'}
   puts 'is false' ==>
 end               =====>  'is false'
 
+
 Having shown you this, NOT SUGGESTING WE CHANGE RUBY!!!!!
+
 """
 puts
 
@@ -316,11 +321,25 @@ puts
 puts
 puts "---------- CONDITION AVERSE ----------"
 puts
-puts "Sometimes 'nil' means nothing.\
-But if you send it a message, 'nil' is something."
+puts "Sometimes 'nil' means nothing. \
+But if you send it a message, 'nil' is something.\ 
+Conditions cover up a problem. Here's an example:"
 puts
 
 
+
+# @16m03s NOTE CONDITIONS BREED
+# SHOTGUN SURGERY MAINTENANCE
+
+
+
+# @16m37s NOTE MESSAGE CENTRIC
+puts "---------- MESSAGE CENTRIC -----------"
+puts
+puts "It's better to know the name of another object then to duplicate behavior"
+puts
+puts "Null Object Pattern: 'Active Nothing'"
+puts
 
 
 
